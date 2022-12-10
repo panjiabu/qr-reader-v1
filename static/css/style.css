@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #3498D8;
+}
+
+.wrapper {
+	height: 270px;
+	width: 420px;
+	border-radius: 5px;
+	background: #fff;
+	padding: 30px 30px 35px;
+	transition: height 0.2s ease;
+}
+
+.wrapper.active {
+	height: 525px;
+}
+
+.wrapper form {
+	height: 210px;
+	cursor: pointer;
+	background: #fff;
+	display: flex;
+	text-align: center;
+	border-radius: 7px;
+	align-items: center;
+	justify-content: center;
+	border: 6px solid #3498D8;
+	transition: height 0.2s ease;
+}
+
+.wrapper.active form {
+	height: 225px;
+	pointer-events: none;
+}
+
+form img {
+	display: none;
+	max-width: 148px;
+}
+
+.wrapper.active form img {
+	display: block;
+}
+
+.wrapper.active form .content {
+	display: none;
+}
+
+form .content {
+	/* display: none; */
+}
+
+form .content i {
+	color: #0885ff;
+	font-size: 55px;
+}
+
+form .content p {
+	color: #0885ff;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.wrapper .details {
+	opacity: 0;
+	margin-top: 25px;
+	pointer-events: none;
+}
+
+.wrapper.active .details {
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity 0.5s 0.05s ease;
+}
+
+.details textarea {
+	width: 100%;
+	height: 128px;
+	outline: none;
+	color: #3b3a3a;
+	font-size: 18px;
+	background: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 1px solid #3498D8;
+}
+
+.details .buttons {
+	display: flex;
+	margin-top: 20px;
+	justify-content: space-between;
+}
+
+.buttons button {
+	height: 55px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	background: #0885ff;
+	border-radius: 5px;
+	width: calc(100% / 2 - 10px);
+}
